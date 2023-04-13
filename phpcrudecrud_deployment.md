@@ -10,7 +10,7 @@ In order to create an entirely new application architecture and stack from the �
 Therefore, we have to first know how to configure a Virtual Machine that is capable of running the server Apache2, using the PHP programming language, and the databases of MariaDB which is a distribution of MySQL. With that said, the Virtual Machine’s within VirtualBox will have a recommended set of settings of about 2GB (2048MB) of RAM, one single virtual CPU, and a 25GB virtual hard disk; and, usually this recommended set of settings will be sufficient.
 
 ### Section 4
-Now lets address how to create a VirtualBox Virtual Machine. Here are the steps in which needs to be completed in order for us to create a VirtualBox Virtual Machine:
+Now let's address how to create a VirtualBox Virtual Machine. Here are the steps in which needs to be completed in order for us to create a VirtualBox Virtual Machine:
 
 1. Click on “new” and make sure that you are on the “Welcome” page if you do not see the “new” button.
 
