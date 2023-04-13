@@ -1,14 +1,16 @@
-### Section 1 
+# PHP Crude Crud Application Deployment Guide
+
+### Section 1
 The purpose of the PHP Crude Crud Application is to demonstrate basic Dynamic HTML Application using PHP. The PHP Crude Crud Application will allow us as users to access the “employee” sample database within the MySQL database, as well as add users to the MySQL database.
 
 ### Section 2
 In order to create an entirely new application architecture and stack from the “ground up”, there are three general steps in which we need to be mindful of. The first step is to create and use a Virtual Machine that is capable of running the necessary server, language, and database. That said, the second thing we have to do is install the necessary server, language, and database that we plan on using; which is Apache2, PHP, and MariaDB (a distribution of MySQL). The third and final step is to deploy the PHP Crude Crud Application.
 
 ### Section 3
-Therefore, we have to first start with creating and configuring a Virtual Machine that is capable of running the server Apache2, using the PHP programming language, and the databases of MariaDB which is a distribution of MySQL. That said, the Virtual Machine’s within VirtualBox will have a recommended set of settings of about 2GB (2048MB) of RAM, one single virtual CPU, and a 25GB virtual hard disk.
+Therefore, we have to first know how to configure a Virtual Machine that is capable of running the server Apache2, using the PHP programming language, and the databases of MariaDB which is a distribution of MySQL. With that said, the Virtual Machine’s within VirtualBox will have a recommended set of settings of about 2GB (2048MB) of RAM, one single virtual CPU, and a 25GB virtual hard disk; and, usually this recommended set of settings will be sufficient.
 
 ### Section 4
-First and foremost we must know how to create a VirtualBox Virtual Machine. Therefore, here are the steps in which needs to be completed in order to create a VirtualBox Virtual Machine:
+Now lets address how to create a VirtualBox Virtual Machine. Here are the steps in which needs to be completed in order for us to create a VirtualBox Virtual Machine:
 
 1. Click on “new” and make sure that you are on the “Welcome” page if you do not see the “new” button.
 
@@ -21,16 +23,16 @@ First and foremost we must know how to create a VirtualBox Virtual Machine. Ther
 5. Finally a “summary” page will appear, take a look at it and make sure you have it set up the way you want it set up and click the “Finish” button when satisfied. 
 
 ### Section 5
-Another thing that we need to make sure we have done and downloaded is the correct iso installer; that iso installer is the Ubuntu 20.04. Here are the steps to downloading the correct iso installer: 
+Another thing that we need to make sure we have done and downloaded is the correct iso installer/file; that iso installer is Ubuntu 20.04. Here are the steps to downloading the correct iso installer/file: 
 
 1. Go to this web page, https://releases.ubuntu.com/20.04/ 
 
-2. Download the “Server install image” by clicking the link (Don’t download the “Desktop image”).
+2. Download the “Server install image” by clicking on the link provided (Do not download the “Desktop image”).
 
 3. Make sure you place it in a space/spot in which you would like to store the iso file rather than leaving it in the “Downloads” folder.
 
 ### Section 6
-Now let’s focus on how to install the Apache2 server and the PHP programming language which will be used for the PHP Crude Crud Application. When it comes to installing Apache2 and PHP, it is rather simple and quick; first make sure you are logged into the Ubuntu Virtual Machine in which you wish to use and follow the steps provided below for both Apache2 and PHP:
+Now let’s focus on how to install the Apache2 server and the PHP programming language which will be used for the PHP Crude Crud Application. When it comes to installing Apache2 and PHP, it is rather simple and quick; we just have to run a few commands. Therefore, first make sure you are logged into the Ubuntu Virtual Machine in which you wish to use via ssh and follow the steps provided below for both Apache2 and PHP:
 
 - To install Apache2 run the following command:
     - sudo apt install apache2
@@ -64,7 +66,7 @@ In regards to the questions asked for in the script. There is no need to update/
 Restart MariaDB so the changes may take effect.
 
 ### Section 8
-In order for PHP to connect to the database we have to first create and add our own user credentials into the database system because we do not want to continue to use root user all of the time. After adding our new user credentials into the MariaDB mysql database system we will have to create an employees database within the MariaDB mysql database by redirecting (<) the employees.sql file into our mysql database while using our new user credentials. The command used for redirecting the employees.sql file into our mysql database is as follows:
+With all of those previous sections and steps above completed lets now focus on how to connect PHP to the database. Well we have to first create and add our own user credentials into the database system because we do not want to continue to use mysql root user all the time. After adding our new user credentials into the MariaDB mysql database system we will have to create an employees database within the MariaDB mysql database by redirecting (<) the employees.sql file into our mysql database while using our new user credentials. The command used for redirecting the employees.sql file into our mysql database is as follows:
 - mysql -u (yourusername) -p -t < employees.sql
 
 This connection data will be stored in the mysql database under Databases, to see this type in the following command:
@@ -89,4 +91,4 @@ As for how we are to deploy the PHP Crude Crud Application, we must follow the f
 3. Lastly, go and check the browser using the IP address of the Virtual Machine. Make sure that it works and play around with it.
 
 ### Section 10
-To make sure that the application is running and working correctly, run some system tests, for example run a functionality test and make sure that each feature is working according to the requirements. Another example could be a performance test which will check how the application is running and working while multiple users use the application.
+To make sure that the application is running and working correctly, run some system tests; for example run a functionality test and make sure that each feature is working according to the requirements. Another example of a system test could be a performance test which will check how the application is running and working while multiple users use the application.
